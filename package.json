@@ -11,7 +11,9 @@
     "microservice": "node microservice.js",
     "compile": "tsc -p tsconfig.prod.json",
     "test": "nyc --require ts-node/register mocha src/**/*.spec.ts --reporter spec",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "nyc": {
     "include": [
@@ -49,7 +51,7 @@
     "@nestjs/core": "2.0.2",
     "@nestjs/microservices": "2.0.3",
     "@nestjs/testing": "2.0.2",
-    "@nestjs/websockets": "2.0.2",
+    "@nestjs/websockets": "3.1.0",
     "cli-color": "^1.1.0",
     "express": "^4.14.0",
     "iterare": "0.0.8",
@@ -57,8 +59,9 @@
     "redis": "^2.7.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.0",
-    "socket.io": "^1.7.2",
-    "typescript": "^2.2.1"
+    "socket.io": "^2.0.2",
+    "typescript": "^2.2.1",
+    "snyk": "^1.165.1"
   },
   "devDependencies": {
     "@nestjs/common": "^1.0.0",
@@ -84,5 +87,6 @@
     "sinon": "^2.1.0",
     "sinon-chai": "^2.8.0",
     "ts-node": "^2.0.0"
-  }
+  },
+  "snyk": true
 }
