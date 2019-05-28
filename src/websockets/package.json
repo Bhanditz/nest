@@ -5,16 +5,20 @@
   "author": "Kamil Mysliwiec",
   "license": "MIT",
   "scripts": {
-    "compile": "tsc -p tsconfig.json"
+    "compile": "tsc -p tsconfig.json",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "iterare": "0.0.8",
-    "socket.io": "^1.7.2"
+    "socket.io": "^2.0.2",
+    "snyk": "^1.167.2"
   },
   "peerDependencies": {
     "@nestjs/common": "~2.*",
     "@nestjs/core": "~2.*",
     "reflect-metadata": "0.1.10",
     "rxjs": "^5.0.3"
-  }
+  },
+  "snyk": true
 }
