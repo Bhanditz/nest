@@ -10,7 +10,7 @@
   "dependencies": {
     "json-socket": "^0.2.1",
     "iterare": "0.0.8",
-    "redis": "^2.6.5"
+    "redis": "^3.1.1"
   },
   "peerDependencies": {
     "@nestjs/common": "~2.*",
